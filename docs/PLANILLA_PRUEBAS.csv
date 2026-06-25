@@ -1,0 +1,26 @@
+ID;Módulo;Caso de Prueba;Precondición;Pasos;Resultado Esperado;Resultado Obtenido;Evidencia;Estado
+TC-01;Login;Autenticación exitosa;Ninguna;1. Ir a /login 2. Ingresar admin@edificio.com 3. Ingresar admin123 4. Click Iniciar sesión;Redirige a /dashboard con datos del administrador;;;Pendiente
+TC-02;Login;Autenticación fallida;Ninguna;1. Ir a /login 2. Ingresar email inválido 3. Ingresar password inválida 4. Click Iniciar sesión;Muestra mensaje "Credenciales inválidas";;;Pendiente
+TC-03;Dashboard;Visualizar dashboard;Usuario autenticado;1. Iniciar sesión 2. Observar el dashboard;Muestra tarjetas con estadísticas (residentes, pagos, visitas, trabajadores);;;Pendiente
+TC-04;Dashboard;Ver alertas de morosidad;Usuario autenticado;1. Ir a Dashboard 2. Observar sección Alertas de Morosidad;Muestra lista de residentes morosos con montos adeudados;;;Pendiente
+TC-05;Residentes;Listar residentes;Usuario autenticado como admin;1. Ir a /residents;Muestra tabla con todos los residentes;;;Pendiente
+TC-06;Residentes;Buscar residente por nombre;Usuario autenticado como admin;1. Ir a /residents 2. Escribir "María" en el buscador;Filtra y muestra solo residentes con "María" en el nombre;;;Pendiente
+TC-07;Residentes;Crear residente propietario;Usuario autenticado como admin;1. Ir a /residents 2. Click "Nuevo Residente" 3. Completar formulario 4. Click Guardar;El residente aparece en la tabla;;;Pendiente
+TC-08;Residentes;Crear residente arrendatario;Usuario autenticado como admin;1. Ir a /residents 2. Click "Nuevo Residente" 3. Seleccionar tipo "Arrendatario" 4. Asociar propietario 5. Guardar;El arrendatario aparece asociado al propietario;;;Pendiente
+TC-09;Residentes;Editar residente;Usuario autenticado como admin;1. Ir a /residents 2. Click ícono lápiz 3. Modificar datos 4. Guardar;Los cambios se reflejan en la tabla;;;Pendiente
+TC-10;Residentes;Eliminar residente;Usuario autenticado como admin;1. Ir a /residents 2. Click ícono papelera;El residente desaparece de la tabla;;;Pendiente
+TC-11;Pagos;Ver cuotas emitidas;Usuario autenticado;1. Ir a /payments;Muestra tabla con todas las cuotas y sus estados;;;Pendiente
+TC-12;Pagos;Realizar pago exitoso;Cuota pendiente;1. Ir a /payments 2. Click "Pagar" en cuota pendiente 3. Seleccionar tipo pago 4. Ingresar comprobante 5. Confirmar;La cuota cambia a estado "Pagado" y aparece en historial;;;Pendiente
+TC-13;Pagos;Ver historial de pagos;Usuario autenticado;1. Ir a /payments 2. Observar sección "Historial de Pagos";Muestra tabla con pagos realizados;;;Pendiente
+TC-14;Mantenimiento;Listar solicitudes;Usuario autenticado;1. Ir a /maintenance;Muestra tarjetas con solicitudes de mantención;;;Pendiente
+TC-15;Mantenimiento;Crear solicitud;Usuario autenticado;1. Ir a /maintenance 2. Click "Nueva Solicitud" 3. Seleccionar residente, categoría, prioridad 4. Agregar descripción 5. Crear;La solicitud aparece en el listado;;;Pendiente
+TC-16;Mantenimiento;Avanzar estado solicitud;Solicitud existe;1. Ir a /maintenance 2. Click "Iniciar" en solicitud pendiente;La solicitud cambia a "en_proceso";;;Pendiente
+TC-17;Visitantes;Registrar ingreso visitante;Usuario autenticado;1. Ir a /visitors 2. Click "Registrar Ingreso" 3. Completar datos 4. Registrar;El visitante aparece con estado "En edificio";;;Pendiente
+TC-18;Visitantes;Registrar salida visitante;Visitante activo;1. Ir a /visitors 2. Click "Registrar Salida" en visitante activo;El visitante cambia a estado "Retirado" con hora de salida;;;Pendiente
+TC-19;Visitantes;Buscar visitante;Usuario autenticado;1. Ir a /visitors 2. Escribir en buscador;Filtra visitantes por nombre, RUT o departamento;;;Pendiente
+TC-20;Personal;Ver trabajadores;Usuario autenticado;1. Ir a /staff;Muestra lista de trabajadores con sus horarios;;;Pendiente
+TC-21;Personal;Añadir trabajador;Usuario autenticado;1. Ir a /staff 2. Click "Añadir Trabajador" 3. Completar formulario 4. Guardar;El trabajador aparece en el listado;;;Pendiente
+TC-22;Personal;Agregar horario;Trabajador existe;1. Ir a /staff 2. Click "Agregar Horario" en un trabajador 3. Seleccionar día y horas 4. Guardar;El horario aparece asociado al trabajador;;;Pendiente
+TC-23;Personal;Avanzar tarea;Tarea existe;1. Ir a /staff 2. Ir a pestaña "Tareas" 3. Click "Iniciar" o "Completar";La tarea cambia de estado;;;Pendiente
+TC-24;Reportes;Ver reporte de morosidad;Usuario autenticado como admin;1. Ir a /reports;Muestra tabla con residentes morosos y montos adeudados;;;Pendiente
+TC-25;Reportes;Ver resumen financiero;Usuario autenticado como admin;1. Ir a /reports;Muestra tarjetas con total de morosos, deuda total e ingresos;;;Pendiente
