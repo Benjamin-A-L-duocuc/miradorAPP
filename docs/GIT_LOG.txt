@@ -1,0 +1,11 @@
+* 4d462c8 (HEAD -> main, origin/main) Modificaciones para deploy en netlify
+* 5da8cbd (tag: v10) feat: add Netlify deployment config and production API fallback
+* 252f7d5 (tag: v9) docs: add README with credentials and deployment info
+* a78ff9a (tag: v8) feat: add quality test plan, test cases, and evidence
+* 76306be (tag: v7) feat: add dashboard, reports, and morosity alerts
+* ca72bc9 (tag: v6) feat: add staff management (horarios, tareas, horas)
+* 9eadbd8 (tag: v5) feat: add visitor access control (entry/exit log)
+* c310156 (tag: v4) feat: add maintenance requests (create, track, status)
+* eab9e3d (tag: v3) feat: add payment module (cuota, pago, historial)
+* 2a991de (tag: v2) feat: add resident management (CRUD, listing, search)
+* d9bf230 (tag: v1) feat: scaffold project with Vite + React + Tailwind + MSW
